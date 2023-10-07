@@ -2,11 +2,11 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo from '../../../../assets/cover.png'
 const Footer = () => {
     return (
-        <div className="bg-orange-300 pb-4 ">
+        <div className="bg-orange-300 pb-4 py-32">
             <div className='grid grid-cols-1 md:grid-cols-3 text-white mb-4'>
-                <div className="col bg-orange-800  p-8">
+                <div className="col  bg-orange-800   p-8">
                     <div className='ml-16 md:mx-2'>
-                    <div className='flex  '>
+                    <div className='flex '>
                         <div ><img className=' h-16' src={logo}  alt="" /></div>
                        
                     </div>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-slate-600 text-center">Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+            <p className="text-slate-600 text-center mx-4">Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
         </div>
     );
 };
