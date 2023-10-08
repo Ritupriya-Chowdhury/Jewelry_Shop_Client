@@ -1,6 +1,30 @@
 import logo from '../../../../assets/cover.png'
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../../../Providers/AuthProviders';
+import { useContext } from 'react';
+
+
 const Navbar = () => {
+    const { user, SignOut } = useContext(AuthContext)
+
+
+    const handleLogout = () => {
+        SignOut()
+            .then(
+                // Swal.fire({
+                //     position: 'top-end',
+                //     icon: 'success',
+                //     title: 'Your Account Successfully Logout!',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                // })
+            )
+            .catch(error => console.error(error.message))
+
+
+    }
+
+
     return (
         <>
              <div>
@@ -50,26 +74,23 @@ const Navbar = () => {
                              </div>
                     </div>
 
-                    {/* { <div className="dropdown dropdown-end ">
+                    {user ?   <div className="dropdown dropdown-end ">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar ml-8 lg:ml-2">
 
                             <div className="w-10 rounded-full ">
-                                <img src="" />
+                            <img src={user.photoUrl} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>
-                                <a className="justify-between">
-                                  {user.displayName}
-
-                                </a>
-                            </li>
+                           
                             <Link to='/dashboard' className='ml-3 uppercase'>Dashboard</Link>
-                            <button className='w-16' onClick={handleLogout}>Logout</button>
+                            <Link to='/profile' className='ml-2 text-orange-700 hover:text-orange-500'> {user.displayName}</Link>
+                            <button className='w-16 text-orange-700 hover:text-orange-500 ' onClick={handleLogout}>Logout</button>
                         </ul>
-                    </div> : */}
-                             <Link to='/login' className='font-bold text-lg ml-2 text-orange-700 hover:text-orange-500'>Login
+                    </div> :
+                             <Link to='/login' className='font-bold text-lg  text-orange-700 hover:text-orange-500'>Login
                                </Link>
+}
                     
                    
                 </div>

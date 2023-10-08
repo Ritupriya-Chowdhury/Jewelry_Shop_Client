@@ -6,6 +6,7 @@ import Home from "../Layout/Pages/Home/Home/Home";
 import AllJewelry from "../Layout/Pages/All_Jewelry/AllJewelry/AllJewelry";
 import Login from "../Layout/Pages/Login&Registration/login/Login";
 import Registration from "../Layout/Pages/Login&Registration/Registration/Registration";
+import Profile from "../Layout/Pages/UserProfile/Profile";
 
  export const router = createBrowserRouter([
     {
@@ -34,6 +35,12 @@ import Registration from "../Layout/Pages/Login&Registration/Registration/Regist
 
           path: "/login",
           element: <Login></Login>
+  
+        },
+        {
+
+          path: "/profile",
+          element: <Profile></Profile>
   
         },
       ]
