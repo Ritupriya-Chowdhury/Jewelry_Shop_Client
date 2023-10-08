@@ -2,9 +2,9 @@ import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import logo from '../../../../assets/cover.png'
 const Footer = () => {
     return (
-        <div className="bg-orange-300 pb-4 py-32">
+        <div className="bg-orange-300 pb-4 pt-12">
             <div className='grid grid-cols-1 md:grid-cols-3 text-white mb-4'>
-                <div className="col  bg-orange-800   p-8">
+                <div className="col bg-orange-800  p-8">
                     <div className='ml-16 md:mx-2'>
                     <div className='flex '>
                         <div ><img className=' h-16' src={logo}  alt="" /></div>

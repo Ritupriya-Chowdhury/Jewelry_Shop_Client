@@ -11,7 +11,7 @@ import Img4 from '../../../../../assets/Images/Banner/1.jpg'
 
 const Banner = () => {
     return (
-        <div className=" md:pt-24 md:pb-4">
+        <div className="pt-24 md:pb-4">
         <Carousel>
         
         {/* className="w-10/12 rounded-lg shadow-2xl mt-20 md:mt-0 mx-auto" */}
