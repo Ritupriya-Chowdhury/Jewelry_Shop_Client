@@ -68,8 +68,8 @@ const Navbar = () => {
                             <button className='w-16' onClick={handleLogout}>Logout</button>
                         </ul>
                     </div> : */}
-                             <div className='font-bold text-lg ml-2 text-orange-700 hover:text-orange-500'>Login
-                               </div>
+                             <Link to='/login' className='font-bold text-lg ml-2 text-orange-700 hover:text-orange-500'>Login
+                               </Link>
                     
                    
                 </div>

@@ -4,6 +4,8 @@ import {
 import Main from "../Layout/MainLayout/Main";
 import Home from "../Layout/Pages/Home/Home/Home";
 import AllJewelry from "../Layout/Pages/All_Jewelry/AllJewelry/AllJewelry";
+import Login from "../Layout/Pages/Login&Registration/login/Login";
+import Registration from "../Layout/Pages/Login&Registration/Registration/Registration";
 
  export const router = createBrowserRouter([
     {
@@ -20,6 +22,18 @@ import AllJewelry from "../Layout/Pages/All_Jewelry/AllJewelry/AllJewelry";
 
           path: "/allJewelry",
           element: <AllJewelry></AllJewelry>
+  
+        },
+        {
+
+          path: "/register",
+          element: <Registration></Registration>
+  
+        },
+        {
+
+          path: "/login",
+          element: <Login></Login>
   
         },
       ]
