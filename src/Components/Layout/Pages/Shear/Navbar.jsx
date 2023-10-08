@@ -16,7 +16,7 @@ const Navbar = () => {
                             <Link to='/'>Home</Link>
                             </li>
                             <li>
-                            <Link to='/'>All Jewelry</Link>
+                            <Link to='/allJewelry'>All Jewelry</Link>
                             </li>
                             <li>
                             <Link to='/'> My Jewelry</Link>
@@ -38,14 +38,14 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex-none">
-                    <div className="dropdown dropdown-end text-orange-700 navbar-center hidden lg:flex">
+                    <div className="dropdown dropdown-end  navbar-center hidden lg:flex">
 
                         <div className='font-bold text-lg mr-2'>
-                        <Link to='/' className='mr-4'>Home</Link>
-                        <Link to='/' className='mr-4'>All_Jewelry</Link>
-                        <Link to='/' className='mr-4'>My_Jewelry</Link>
-                        <Link to='/' className='mr-4'>Add_Jewelry</Link>
-                        <Link to='/' className='mr-4'>Blogs</Link>
+                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Home</Link>
+                        <Link to='/allJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>All_Jewelry</Link>
+                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>My_Jewelry</Link>
+                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
+                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Blogs</Link>
                         
                              </div>
                     </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
                             <button className='w-16' onClick={handleLogout}>Logout</button>
                         </ul>
                     </div> : */}
-                             <div className='font-bold text-lg ml-2 text-orange-700'>Login
+                             <div className='font-bold text-lg ml-2 text-orange-700 hover:text-orange-500'>Login
                                </div>
                     
                    

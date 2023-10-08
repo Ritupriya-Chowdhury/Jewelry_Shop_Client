@@ -1,6 +1,6 @@
 //import { Outlet } from "react-router-dom";
-import Navbar from "../Shear/Navbar";
-import Footer from "../Shear/Footer";
+import Navbar from "../Pages/Shear/Navbar";
+import Footer from "../Pages/Shear/Footer";
 import { Outlet } from "react-router-dom";
 
 

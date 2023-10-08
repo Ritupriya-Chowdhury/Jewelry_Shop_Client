@@ -11,7 +11,7 @@ const Footer = () => {
                        
                     </div>
                     <p className='mt-2 ml-10'>
-                        About Us
+                        Agrabad, Chattogram
 
                     </p>
 
