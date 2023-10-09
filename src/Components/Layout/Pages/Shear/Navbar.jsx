@@ -84,7 +84,7 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                            
-                            <Link to='/dashboard' className='ml-3 uppercase'>Dashboard</Link>
+                            <Link to='/dashboard' className='ml-3 text-orange-700 hover:text-orange-500uppercase'>Dashboard</Link>
                             <Link to='/profile' className='ml-2 text-orange-700 hover:text-orange-500'> {user.displayName}</Link>
                             <button className='w-16 text-orange-700 hover:text-orange-500 ' onClick={handleLogout}>Logout</button>
                         </ul>

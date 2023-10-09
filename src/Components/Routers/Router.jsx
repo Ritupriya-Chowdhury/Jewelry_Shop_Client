@@ -10,6 +10,8 @@ import Profile from "../Layout/Pages/UserProfile/Profile";
 import NotFound from "../Layout/Pages/404Pages/404Pages";
 import AddAJewelry from "../Layout/Pages/AddAJewelry/AddAJewelry";
 import MyJewelry from "../Layout/Pages/MyJewelry/MyJewelry";
+import Dashboard from "../Layout/Pages/DashBoard/Dashboard";
+import GoogleLogin from "../Layout/Pages/Login&Registration/login/GoogleLogin";
 
  export const router = createBrowserRouter([
     {
@@ -42,6 +44,13 @@ import MyJewelry from "../Layout/Pages/MyJewelry/MyJewelry";
         },
         {
 
+          path: "/login-with-google",
+          element:<GoogleLogin></GoogleLogin>
+  
+        },
+
+        {
+
           path: "/profile",
           element: <Profile></Profile>
   
@@ -60,6 +69,10 @@ import MyJewelry from "../Layout/Pages/MyJewelry/MyJewelry";
         },
       ]
       
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboard></Dashboard>
     },
     {
       path: '/*',

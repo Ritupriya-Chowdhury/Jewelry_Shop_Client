@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
 import {AuthContext} from '../../../../Providers/AuthProviders'
-// import { FaGoogle } from "react-icons/fa";
+
 import Swal from 'sweetalert2'
 
 const Login = () => {
@@ -55,21 +55,7 @@ const { register, handleSubmit,reset } = useForm();
     }
 
 
-    // const handleGoogleSignIn = () => {
-    //     signInWithGoogle()
-    //         .then(result => {
-    //             const loggedUser = result.user;
-    //             console.log(loggedUser);
-    //             setError('');
-
-    //             navigate('/');
-    //         })
-    //         .catch(error => {
-    //             setError(error.message);
-    //         })
-
-
-    // }
+    
 
 
     return (
@@ -117,9 +103,9 @@ const { register, handleSubmit,reset } = useForm();
                         </form>
                         <div>
                             <p className="text-orange-700 text-center mb-4">New Here? Create An <Link to='/register' className="font-bold text-xl">Account</Link></p>
-                            {/* <p className="text-orange-700 text-center mb-4">Or sign in with <button className="btn btn-outline btn-primary pl-28 " onClick={handleGoogleSignIn}>Sign In with <p className='ml-2'><FaGoogle /></p>
-                            </button></p>
-                             */}
+                            <p className="text-blue-700 text-center mb-4">Or sign in with <Link to='/login-with-google' className="text-2xl" >Google</Link> </p>
+                            
+                            
                             
                         </div>
                         <div className="card-body flex text-blue-700">
