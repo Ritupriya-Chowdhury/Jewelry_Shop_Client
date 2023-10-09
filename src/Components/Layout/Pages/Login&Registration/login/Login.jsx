@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
 import {AuthContext} from '../../../../Providers/AuthProviders'
 // import { FaGoogle } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const [Error,setError]=useState('');
@@ -33,15 +34,15 @@ const { register, handleSubmit,reset } = useForm();
              console.log(user);
             
              reset();
-            // Swal.fire({
-            //     title: 'Login Successful!',
-            //     showClass: {
-            //       popup: 'animate__animated animate__fadeInDown'
-            //     },
-            //     hideClass: {
-            //       popup: 'animate__animated animate__fadeOutUp'
-            //     }
-            //   });
+            Swal.fire({
+                title: 'Login Successful!',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              });
               navigate(from,{replace:true});
             // ...
           })

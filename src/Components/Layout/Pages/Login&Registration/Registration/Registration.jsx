@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../../../Providers/AuthProviders';
-//  import Swal from 'sweetalert2'
+  import Swal from 'sweetalert2'
 
 const Register = () => {
 
@@ -22,13 +22,13 @@ const Register = () => {
                     .then(() => {
                         console.log('user profile info updated')
                         reset();
-                        // Swal.fire({
-                        //     position: 'top-end',
-                        //     icon: 'success',
-                        //     title: 'User created successfully.',
-                        //     showConfirmButton: false,
-                        //     timer: 1500
-                        // });
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                         navigate('/');
 
                     })

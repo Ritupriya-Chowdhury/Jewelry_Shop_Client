@@ -2,6 +2,7 @@ import logo from '../../../../assets/cover.png'
 import {Link} from 'react-router-dom'
 import { AuthContext } from '../../../Providers/AuthProviders';
 import { useContext } from 'react';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
@@ -11,13 +12,13 @@ const Navbar = () => {
     const handleLogout = () => {
         SignOut()
             .then(
-                // Swal.fire({
-                //     position: 'top-end',
-                //     icon: 'success',
-                //     title: 'Your Account Successfully Logout!',
-                //     showConfirmButton: false,
-                //     timer: 1500
-                // })
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your Account Successfully Logout!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             )
             .catch(error => console.error(error.message))
 
@@ -46,7 +47,7 @@ const Navbar = () => {
                             <Link to='/'> My Jewelry</Link>
                             </li>
                             <li>
-                            <Link to='/'>Add Jewelry</Link>
+                            <Link to='/addjewelry'>Add Jewelry</Link>
                             </li>
                             <li>
                             <Link to='/'> Blogs</Link>
@@ -68,7 +69,7 @@ const Navbar = () => {
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Home</Link>
                         <Link to='/allJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>All_Jewelry</Link>
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>My_Jewelry</Link>
-                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
+                        <Link to='/addjewelry' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Blogs</Link>
                         
                              </div>
