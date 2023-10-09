@@ -44,10 +44,10 @@ const Navbar = () => {
                             <Link to='/allJewelry'>All Jewelry</Link>
                             </li>
                             <li>
-                            <Link to='/'> My Jewelry</Link>
+                            <Link to='/myJewelry'> My Jewelry</Link>
                             </li>
                             <li>
-                            <Link to='/addjewelry'>Add Jewelry</Link>
+                            <Link to='/addJewelry'>Add Jewelry</Link>
                             </li>
                             <li>
                             <Link to='/'> Blogs</Link>
@@ -68,8 +68,8 @@ const Navbar = () => {
                         <div className='font-bold text-lg mr-2'>
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Home</Link>
                         <Link to='/allJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>All_Jewelry</Link>
-                        <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>My_Jewelry</Link>
-                        <Link to='/addjewelry' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
+                        <Link to='/myJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>My_Jewelry</Link>
+                        <Link to='/addJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Blogs</Link>
                         
                              </div>

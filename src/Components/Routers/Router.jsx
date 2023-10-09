@@ -9,6 +9,7 @@ import Registration from "../Layout/Pages/Login&Registration/Registration/Regist
 import Profile from "../Layout/Pages/UserProfile/Profile";
 import NotFound from "../Layout/Pages/404Pages/404Pages";
 import AddAJewelry from "../Layout/Pages/AddAJewelry/AddAJewelry";
+import MyJewelry from "../Layout/Pages/MyJewelry/MyJewelry";
 
  export const router = createBrowserRouter([
     {
@@ -47,8 +48,14 @@ import AddAJewelry from "../Layout/Pages/AddAJewelry/AddAJewelry";
         },
         {
 
-          path: "/addjewelry",
+          path: "/addJewelry",
           element: <AddAJewelry></AddAJewelry>
+  
+        },
+        {
+
+          path: "/myJewelry",
+          element: <MyJewelry></MyJewelry>
   
         },
       ]
