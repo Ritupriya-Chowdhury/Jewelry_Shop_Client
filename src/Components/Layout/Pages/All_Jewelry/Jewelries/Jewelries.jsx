@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
-
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from "../../../../Providers/AuthProviders";
+//import { ToastContainer, toast } from 'react-toastify';
+ import Swal from 'sweetalert2'
 
 const Jewelries = () => {
+
+    const { user } = useContext(AuthContext);
+    const navigate=useNavigate();
+    const location=useLocation();
 
     const [jewelries, setJewelries] = useState([]);
     useEffect(() => {
@@ -17,6 +25,50 @@ const Jewelries = () => {
     const handleShowAll = () => {
         setShowAll(true);
     };
+
+
+    const handleEnroll = (jewelry)=> {
+        const {_id, jewelryImage,jewelryName,price}=jewelry
+        
+       if (!user) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please Login First',
+            
+          })
+            navigate('/login',{state:{from:location}})
+        }
+        else if(user ){
+            const selectJewelry={JId:_id,JImage:jewelryImage,price, JName:jewelryName, email:user.email}
+            console.log(jewelry)
+            fetch('http://localhost:1830/selectJewelry',{
+                method: 'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify(selectJewelry)
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                if(data.insertedId){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Jewelry Selected!',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                }
+            })
+            
+    
+    
+        }
+    }
+
+    
+
 
     return (
         <div className="pt-32 pb-20">
@@ -36,7 +88,8 @@ const Jewelries = () => {
                                        {jewelry.price}/=
                                         </div>
                                         <div className="card-actions">
-                                        <button className="btn btn-primary">Buy Now</button>
+                                        <button className="btn btn-outline btn-primary " onClick={()=>handleEnroll(jewelry)}>Buy Now</button>
+                       
                                     </div>
                                     </div>
                                     

@@ -7,6 +7,7 @@ import AllJewelry from "../Layout/Pages/All_Jewelry/AllJewelry/AllJewelry";
 import Login from "../Layout/Pages/Login&Registration/login/Login";
 import Registration from "../Layout/Pages/Login&Registration/Registration/Registration";
 import Profile from "../Layout/Pages/UserProfile/Profile";
+import NotFound from "../Layout/Pages/404Pages/404Pages";
 
  export const router = createBrowserRouter([
     {
@@ -44,6 +45,11 @@ import Profile from "../Layout/Pages/UserProfile/Profile";
   
         },
       ]
+      
     },
+    {
+      path: '/*',
+      element: <NotFound></NotFound>
+    }
   ]);
   
