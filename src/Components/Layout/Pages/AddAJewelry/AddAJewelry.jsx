@@ -14,8 +14,8 @@ const AddAJewelry= () => {
         console.log(data);
         const addJewelry={
           
-           jewelryImage: data.musicClassName,
-           jewelryName:data.classImage,
+           jewelryImage: data.JewelryImage,
+           jewelryName:data.JewelryName,
             price:data.price,
             
         }
@@ -43,7 +43,7 @@ const AddAJewelry= () => {
     return (
         <>
             <Helmet><title>Owner | Add A Jewelry</title></Helmet>
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto mt-8 pt-36 pb-8">
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto pt-36 pb-8">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     <div className="mb-4 col">
                         <label htmlFor="JewelryName" className="block mb-1 text-orange-700">
@@ -65,7 +65,7 @@ const AddAJewelry= () => {
                         </label>
                         <input
                             type="text"
-                            id="classImage"
+                            id="JewelryImage"
                             {...register('JewelryImage', { required: 'Jewelry Image is required' })}
                             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                         />
@@ -84,12 +84,12 @@ const AddAJewelry= () => {
                             Price:
                         </label>
                         <input
-                            type="number"
+                            type="text"
                             id="price"
                             {...register('price', { required: 'Price is required' })}
                             className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                         />
-                        {errors.price && <span className="text-red-500">{errors.price.message}</span>}
+                       
                     </div>
                 </div>
                 
