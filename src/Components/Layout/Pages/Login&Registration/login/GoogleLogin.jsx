@@ -53,7 +53,7 @@ const handleGoogleLogin=()=>{
 
     return (
         <div >
-            <Helmet><title>SurTaal Music | Google Login</title></Helmet>
+            <Helmet><title>Jewelry Shop | Google Login</title></Helmet>
             <div className="hero min-h-screen bg-base-200 ">
                 <div className="hero-content flex-col lg:flex-row my-20">
                     <div className=" text-center lg:text-left ">

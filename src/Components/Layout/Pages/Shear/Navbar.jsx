@@ -5,9 +5,10 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2';
 
 
+
 const Navbar = () => {
     const { user, SignOut } = useContext(AuthContext)
-
+   
 
     const handleLogout = () => {
         SignOut()
@@ -47,7 +48,7 @@ const Navbar = () => {
                             <Link to='/myJewelry'> My Jewelry</Link>
                             </li>
                             <li>
-                            <Link to='/addJewelry'>Add Jewelry</Link>
+                            <Link to='/addJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
                             </li>
                             <li>
                             <Link to='/'> Blogs</Link>
@@ -69,7 +70,7 @@ const Navbar = () => {
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Home</Link>
                         <Link to='/allJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>All_Jewelry</Link>
                         <Link to='/myJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>My_Jewelry</Link>
-                        <Link to='/addJewelry' className='mr-4 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
+                        <Link to='/addJewelry' className='mr-2 text-orange-700 hover:text-orange-500'>Add_Jewelry</Link>
                         <Link to='/' className='mr-4 text-orange-700 hover:text-orange-500'>Blogs</Link>
                         
                              </div>
@@ -84,14 +85,14 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                            
-                            <Link to='/dashboard' className='ml-3 text-orange-700 hover:text-orange-500uppercase'>Dashboard</Link>
+                    <Link to='/dashboard/ownerDashboard' className='ml-3 text-orange-700 hover:text-orange-500uppercase'>Owner Dashboard</Link><Link to='/dashboard/userDashboard' className='ml-3 text-orange-700 hover:text-orange-500uppercase'>User Dashboard</Link>
                             <Link to='/profile' className='ml-2 text-orange-700 hover:text-orange-500'> {user.displayName}</Link>
                             <button className='w-16 text-orange-700 hover:text-orange-500 ' onClick={handleLogout}>Logout</button>
                         </ul>
                     </div> :
                              <Link to='/login' className='font-bold text-lg  text-orange-700 hover:text-orange-500'>Login
-                               </Link>
-}
+                               </Link>}
+
                     
                    
                 </div>

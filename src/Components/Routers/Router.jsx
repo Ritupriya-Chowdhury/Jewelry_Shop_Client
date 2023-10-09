@@ -12,6 +12,10 @@ import AddAJewelry from "../Layout/Pages/AddAJewelry/AddAJewelry";
 import MyJewelry from "../Layout/Pages/MyJewelry/MyJewelry";
 import Dashboard from "../Layout/Pages/DashBoard/Dashboard";
 import GoogleLogin from "../Layout/Pages/Login&Registration/login/GoogleLogin";
+import OwnerDashboard from "../Layout/Pages/DashBoard/OwnerDashboard";
+import UserDashBoard from "../Layout/Pages/DashBoard/UserDashBoard";
+import AddedJewelry from "../Layout/Pages/AddAJewelry/AddedJewelry";
+import AllUsers from "../Layout/Pages/AllUser/AllUsers";
 
  export const router = createBrowserRouter([
     {
@@ -63,16 +67,39 @@ import GoogleLogin from "../Layout/Pages/Login&Registration/login/GoogleLogin";
         },
         {
 
+          path: "/addedJewelry",
+          element: <AddedJewelry></AddedJewelry>
+  
+        },
+        {
+
           path: "/myJewelry",
           element: <MyJewelry></MyJewelry>
   
         },
+        
       ]
       
     },
     {
       path: '/dashboard',
-      element: <Dashboard></Dashboard>
+      element: <Dashboard></Dashboard>,
+      children:[
+        {
+        path: '/dashboard/ownerDashboard',
+        element:<OwnerDashboard></OwnerDashboard>
+        },
+        {
+          path: '/dashboard/userDashboard',
+          element:<UserDashBoard></UserDashBoard>
+          },
+          {
+
+            path: "/dashboard/allUsers",
+            element: <AllUsers></AllUsers>
+    
+          },
+      ]
     },
     {
       path: '/*',

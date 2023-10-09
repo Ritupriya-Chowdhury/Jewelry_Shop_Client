@@ -13,6 +13,7 @@ const Profile = () => {
           <h2 className="card-title text-orange-700">{user.displayName}</h2>
 
          < h2 className="card-title text-orange-700">{user.email}</h2>
+        
          
         </div>
       </div>

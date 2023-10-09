@@ -1,6 +1,6 @@
 
 
-const UserDashBoard = () => {
+const AllUsers = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UserDashBoard = () => {
     );
 };
 
-export default UserDashBoard;
+export default AllUsers;

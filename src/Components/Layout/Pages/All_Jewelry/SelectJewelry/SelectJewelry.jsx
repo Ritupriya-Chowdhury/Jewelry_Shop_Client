@@ -10,7 +10,7 @@ const SelectJewelry=()=>{
         // enabled: !loading,
         queryFn: async () => {
             
-           const response=await fetch(`http://localhost:1830/selectJewelry?email=${user?.email}`,{
+           const response=await fetch(`http://localhost:1830/users/owner/${user?.email}}`,{
 
             // header:{
             //     authorization:`bearer ${localStorage.getItem('access-token')}`
